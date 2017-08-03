@@ -1,0 +1,25 @@
+require "Pickup"
+
+
+@teams = {"Andy" => 110, "Casey" => 89, "Sami" => 34, "Jake" => 21, "Chandler" => 13, "Chris" => 8, "Klaas" => 5, "Johnson" => 3, "Mata" => 2, "Adj/Steven" => 1}
+
+
+loop do
+
+	if @teams.empty? == false
+
+		teams_weighted = Pickup.new(@teams)
+
+		selection = teams_weighted.pick(1)
+
+		puts selection
+
+		@teams.delete(selection)
+
+	else
+
+		break
+
+	end
+
+end
